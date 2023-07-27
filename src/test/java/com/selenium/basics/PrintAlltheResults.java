@@ -1,5 +1,6 @@
 package com.selenium.basics;
-
+import java.util.List;
+import java.util.ArrayList;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -25,12 +26,22 @@ public class PrintAlltheResults {
 		
 		List<WebElement> links = driver.findElements(By.tagName("a"));
 		//System.out.println(links.size());
-		
+		List<String> urls = new ArrayList<String>();
 		for(WebElement link:links)
 		{
-			
-			System.out.println(link.getAttribute("href"));
-			//System.out.println(link.getText());
+			String url=link.getAttribute("href");
+			if(url!=null && !url.isEmpty()&& url.startsWith("https"))
+			{
+			System.out.println(url);
+			urls.add(url);
+			}
+		}
+		for(String url:urls)
+		{
+			driver.navigate().to(url);
+			Thread.sleep(1000);
+			driver.navigate().back();
+			Thread.sleep(1000);
 		}
 		
 		driver.quit();
