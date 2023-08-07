@@ -40,7 +40,7 @@ public class Windowhandling {
 		}
 		
 		//driver.close() //it will close the current active window.
-		driver.quit(); //it will close all the windows opened by the webdriver session
+		//driver.quit(); //it will close all the windows opened by the webdriver session
 
 	}
 
