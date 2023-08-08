@@ -14,12 +14,13 @@
 			<artifactId>selenium-java</artifactId>
 			<version>4.9.0</version>
 		</dependency>
-
-
+		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependency>
-			<groupId>com.guvi.sample</groupId>
-			<artifactId>SeleniumWithoutDriver</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.7.1</version>
+			<scope>test</scope>
 		</dependency>
+
 	</dependencies>
 </project>

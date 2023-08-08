@@ -36,6 +36,9 @@ public class Checkbox_Radiobutton {
 		thirdCheckbox.click();
 		Thread.sleep(1000);
 		System.out.println("Selected the third checkbox option");
+		//isDisplayed
+		boolean isthirdcheckBox=thirdCheckbox.isDisplayed();
+		System.out.println(isthirdcheckBox);
 		
 		if(thirdCheckbox.isSelected())
 		{
