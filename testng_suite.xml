@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<groups>
+		<run>
+			<include name="sanity"/>
+			<!--exclude name="smoke"-->
+			<include name="smoke"/>
+		</run>
+	</groups>
+  <test name="sanity Test">
+    <classes>
+      <class name="com.testNG.TestNgGr1"/>
+    </classes>
+  </test> <!-- Test -->
+  
+ <test name="SmokeTest">
+    <classes>
+      <class name="com.testNG.TestNggr2"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
+

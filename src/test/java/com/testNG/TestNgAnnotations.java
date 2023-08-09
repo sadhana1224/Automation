@@ -24,8 +24,10 @@ public class TestNgAnnotations {
 	 * AT - 1
 	 * AS - 1
 	 * 
-	 * 
+	 *
 	 */
+	
+	
 	
 	@BeforeSuite
 	public void beforeSuite()
@@ -54,22 +56,37 @@ public class TestNgAnnotations {
 		System.out.println("This will get executed before each @Test annotated method");
 	}
 	
-	@Test
-	public void Test1()
+	
+	/*
+	 * priority
+	 * enabled
+	 * dependsOnMethods
+	 * alwaysRun
+	 * 
+	 */
+	
+	@Test (priority=3, dependsOnMethods="atestCase4")
+	public void testCase1()
 	{
 		System.out.println("Test case 1");
 	}
 	
-	@Test
-	public void Test2()
+	@Test (priority=2, alwaysRun=true)
+	public void testCase2()
 	{
 		System.out.println("Test case 2");
 	}
 	
-	@Test
-	public void Test3()
+	@Test (priority=1, enabled=false)
+	public void testCase3()
 	{
 		System.out.println("Test case 3");
+	}
+	
+	@Test (priority=4)
+	public void atestCase4()
+	{
+		System.out.println("Test case 4");
 	}
 	
 	
