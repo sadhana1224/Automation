@@ -38,7 +38,7 @@ public class Gc {
 
 	        List<WebElement> veggies = driver.findElements(By.xpath("//tbody/tr"));
 	        
-	        for (int i = 1; i <= veggies.size(); i++) {
+	        for (int i=1; i<=veggies.size();i++) {
 	            String vegName = driver.findElement(By.xpath("//tbody/tr[" + i + "]/td[1]")).getText();
 	            String Price = driver.findElement(By.xpath("//tbody/tr[" + i + "]/td[2]")).getText();
 	            String discountt = driver.findElement(By.xpath("//tbody/tr[" + i + "]/td[3]")).getText();
