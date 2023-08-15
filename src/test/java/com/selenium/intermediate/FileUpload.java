@@ -8,7 +8,6 @@ public class FileUpload {
 	static WebDriver driver;
 
 	public static void main(String[] args) throws InterruptedException {
-		// TODO Auto-generated method stub
 
 		driver=new ChromeDriver();
 		driver.navigate().to("https://the-internet.herokuapp.com/upload");

@@ -23,7 +23,7 @@ public class TestNgAssertions {
 	public void testCase1()
 	{
 		driver.get("https://www.google.com");
-		String expectedTitle="Google1";
+		String expectedTitle="Google";
 		Assert.assertEquals(driver.getTitle(), expectedTitle);
 		driver.findElement(By.name("q")).sendKeys("TestNg Assertions");
 		

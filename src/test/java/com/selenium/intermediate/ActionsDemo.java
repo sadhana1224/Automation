@@ -27,6 +27,9 @@ public class ActionsDemo {
 		WebElement cl= driver.findElement(By.xpath("//button[text()='Click Me']"));
 		action.click(cl).build().perform();
 		
+		//WebElement element = driver.findElement(By.xpath("//span[text()='Text Box']"));
+		//action.moveToElement(element).build().perform();
+		
 
 		
 		
