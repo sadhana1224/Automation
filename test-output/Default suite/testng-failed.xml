@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testNG.TestNgAssertions">
+      <class name="com.testNG.TestNGParallel">
         <methods>
-          <include name="testCase4"/>
-          <include name="closeBrowser"/>
           <include name="launchBrowser"/>
+          <include name="launchYahoo"/>
+          <include name="closeBrowser"/>
         </methods>
-      </class> <!-- com.testNG.TestNgAssertions -->
+      </class> <!-- com.testNG.TestNGParallel -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

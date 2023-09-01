@@ -31,6 +31,8 @@ public class ReadExcelUsingApachePOI {
 			//System.getProperty("user.dir")--> will give the path of the current working directory
 			workbook= new XSSFWorkbook(System.getProperty("user.dir")+"/exceltitles.xlsx");
 			XSSFSheet worksheet= workbook.getSheetAt(0);
+			
+			//XSSFSheet sheet1= workbook.createSheet("sample");
 			XSSFRow row= worksheet.getRow(0);
 			
 			//it will return the no. of rows in that specific sheet
@@ -44,6 +46,7 @@ public class ReadExcelUsingApachePOI {
 				for(int j=0;j<noOfCells;j++)
 				{
 					String cellValue= worksheet.getRow(i).getCell(j).getStringCellValue();
+					//String writeValue= worksheet.createRow(6).createCell(0).setCellValue("sample");
 					System.out.println("Cell Value -->"+cellValue);
 					
 							
