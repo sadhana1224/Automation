@@ -27,7 +27,7 @@ public class Spicejet1 {
 		options.addArguments("--disable-notifications");
 
 		//driver=new ChromeDriver(options);
-		driver = new EdgeDriver();
+		driver = new ChromeDriver();
 		driver.get("https://www.spicejet.com/"); //-->1st testcase
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
