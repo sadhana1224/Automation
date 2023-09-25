@@ -28,7 +28,7 @@ public class Spicejet5aOneWay
 		driver.manage().window().maximize();
 		driver.navigate().to("https://www.spicejet.com/");
 
-		driver.findElement(By.xpath("//div[text()='one way']")).click();
+		//driver.findElement(By.xpath("//div[@data-testid='one-way-radio-button']")).click();
 		driver.findElement(By.xpath("//*[@data-testid='to-testID-origin']")).click();
 		driver.findElement(By.xpath("//div[text()='Bengaluru']")).click();
 

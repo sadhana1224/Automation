@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testNG.TestNGParallel">
+      <class name="com.testNG.ReadExelPractice">
         <methods>
           <include name="launchBrowser"/>
-          <include name="launchYahoo"/>
-          <include name="closeBrowser"/>
+          <include name="fetchdata"/>
         </methods>
-      </class> <!-- com.testNG.TestNGParallel -->
+      </class> <!-- com.testNG.ReadExelPractice -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

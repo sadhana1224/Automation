@@ -56,9 +56,9 @@ public class Spicejet1 {
 		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//div[@class='react-datepicker__month-container']")));
 
-		driver.findElement(By.xpath("//select[@class='react-datepicker__month-select']//option[text()='January']")).click();
-		driver.findElement(By.xpath("//select[@class='react-datepicker__year-select']//option[text()='1992']")).click();
-		driver.findElement(By.xpath("//div[text()='28']")).click();
+		driver.findElement(By.xpath("//select[@class='react-datepicker__month-select']//option[text()='July']")).click();
+		driver.findElement(By.xpath("//select[@class='react-datepicker__year-select']//option[text()='1997']")).click();
+		driver.findElement(By.xpath("//div[text()='7']")).click();
 
 		JavascriptExecutor js=(JavascriptExecutor)driver;
 		//vertical scrolldown by 1000

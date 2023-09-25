@@ -1,6 +1,7 @@
 package com.selenium.assignment;
 
 import java.awt.AWTException;
+import java.awt.Desktop.Action;
 import java.awt.Robot;
 import java.awt.event.InputEvent;
 import java.time.Duration;
@@ -85,13 +86,14 @@ public class SpiceJet6thTestcase {
 		driver.findElement(By.xpath("//div[@data-testid='traveller-0-travel-info-cta']")).click();
 
 		//2nd passenger
-		driver.findElement(By.xpath("//*[@data-testid='traveller-1-first-traveller-info-input-box']")).sendKeys("sadhana");
-		driver.findElement(By.xpath("//*[@data-testid='traveller-1-last-traveller-info-input-box']")).sendKeys("Logesh");
-		driver.findElement(By.xpath("//*[@data-testid='sc-member-mobile-number-input-box']")).sendKeys("9688741481");
+		driver.findElement(By.xpath("//*[@data-testid='traveller-1-first-traveller-info-input-box']")).sendKeys("suba");
+		driver.findElement(By.xpath("//*[@data-testid='traveller-1-last-traveller-info-input-box']")).sendKeys("natraj");
+		driver.findElement(By.xpath("//*[@data-testid='sc-member-mobile-number-input-box']")).sendKeys("9750645623");
 		//continue to add-ons
 		driver.findElement(By.xpath("//div[@data-testid='traveller-info-continue-cta']")).click();
 		//click continue to payment
 		Thread.sleep(5000);
+		/*
 		try {
 			// Create a Robot instance
 			Robot robot = new Robot();
@@ -103,44 +105,36 @@ public class SpiceJet6thTestcase {
 			robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK); 
 			Thread.sleep(5000);
 
-			WebElement cl=  driver.findElement(By.id("at_addon_close_icon"));
-			cl.click();
+			//
 
 		} catch (AWTException e) {
 			e.printStackTrace();
 		}
+		*/
+		//(//*[text()='Continue'])[3]
 
-		WebElement continueElement = driver.findElement(By.xpath("(//*[text()='Continue'])[3]"));
+	/*	WebElement continueElement = driver.findElement(By.id("skipfrompopup"));
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
 		executor.executeScript("arguments[0].click();", continueElement);
+		WebElement cl=  driver.findElement(By.id("at_addon_close_icon"));
+		cl.click();
+		//cl.click();
+		*/
 		
-		//*[@data-testid='add-ons-continue-footer-button' and not(div[contains(@style,'display:none')])][3]/div[1]
-	//	WebElement elem = driver.findElement(By.xpath("//*[@id=\"button\"]"));
-	//	WebElement elem = driver.findElement(By.xpath("(//*[text()='Continue'])[3]"));
-		
-	//	elem.click();
-		
-	//	wait.until(ExpectedConditions.elementToBeClickable(elem)).click();
 	
-
-		//		Thread.sleep(8000);
-		//		JavascriptExecutor js = (JavascriptExecutor) driver;
-		//		js.executeScript("document.body.click();");
-		//		//JavascriptExecutor js=(JavascriptExecutor)driver;
-		//		//WebElement cl=  driver.findElement(By.xpath("//div[@class='at_addon_close']"));
-		//	//	js.executeScript("arguments[0].click();", cl);
-		//		//Thread.sleep(1000);
-		//		//driver.findElement(By.xpath("//*[@data-testid='add-ons-continue-footer-button'][3]")).click();
-		//
-		//	/*	JavascriptExecutor js=(JavascriptExecutor)driver;
-		//		WebElement cl=  driver.findElement(By.xpath("//div[@class='at_addon_close']"));
-		//		js.executeScript("arguments[0].click();", cl);
-		//		*/
-		//		//WebElement dc=driver.findElement(By.xpath("//div[text()='Trip Summary']"));
-		//		//  act.doubleClick(dc).build().perform();
-		//		// driver.findElement(By.xpath("//div[@id='at_addon_close_icon']")).click();//close the add
-		//		// act.click().perform();
-
+	//	WebElement dc=driver.findElement(By.xpath("//div[@id='at_addon_modal'])"));
+	//	act.doubleClick(dc).build().perform();
+		
+		
+		/*WebElement popUp=driver.findElement(By.xpath("//div[@id='at_addon_close_icon']"));
+		Thread.sleep(2000);
+		 act.moveToElement(popUp, 1, 1).perform();*/
+		
+		WebElement continueElement1 = driver.findElement(By.xpath("(//*[text()='Continue'])[3]"));
+		JavascriptExecutor executor1 = (JavascriptExecutor) driver;
+		executor1.executeScript("arguments[0].click();", continueElement1);
+		
+	
 	}
 
 

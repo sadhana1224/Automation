@@ -27,7 +27,8 @@ public class BestBuy7 {
 		WebElement furniture = driver.findElement(By.xpath("//li[@class='liDropdownList '][2]"));
 		furniture.click();
 		driver.findElement(By.xpath("//a[text()='Kitchen & Dining Furniture']")).click();
-		driver.findElement(By.xpath("//h4[@class='sku-title']//a[text()='Arcade1Up - Capcom Street Fighter II Legacy Stool - Multi']")).click();
+		//((//h4[@class='sku-title'])//a)[1]
+		driver.findElement(By.xpath("((//h4[@class='sku-title'])//a)[1]")).click();
 		driver.findElement(By.xpath("(//div[@class='fulfillment-add-to-cart-button'])[1]")).click();
 		
 	}
