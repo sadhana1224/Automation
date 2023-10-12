@@ -41,5 +41,10 @@
 		</dependency>
 
 
+		<dependency>
+			<groupId>com.framework</groupId>
+			<artifactId>BESTBUYFramework</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 </project>

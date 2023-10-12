@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testNG.ReadExelPractice">
+      <class name="com.selenium.interview.DataProviderUsingExcel">
         <methods>
+          <include name="fetchData"/>
+          <include name="closeBrowsers"/>
           <include name="launchBrowser"/>
-          <include name="fetchdata"/>
         </methods>
-      </class> <!-- com.testNG.ReadExelPractice -->
+      </class> <!-- com.selenium.interview.DataProviderUsingExcel -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
